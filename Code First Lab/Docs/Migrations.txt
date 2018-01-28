@@ -1,0 +1,5 @@
+﻿Enable-Migrations -ContextTypeName PlacesContext -MigrationsDirectory Migrations\Places
+
+Add-Migration -ConfigurationTypeName Code_First_Lab.Migrations.Places.Configuration "InitialCreate"
+
+Update-Database -ConfigurationTypeName Code_First_Lab.Migrations.Places.Configuration
