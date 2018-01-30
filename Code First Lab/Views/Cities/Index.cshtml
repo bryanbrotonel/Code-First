@@ -19,21 +19,29 @@
         </th>
         <th></th>
     </tr>
+    <p>Viewbag.Provin</p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.cityName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.population)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.cityID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.cityID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.cityID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.population)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cityID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.cityID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.cityID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.cityID })
+            </td>
+
+        </tr>
+    }
+
+
 
 </table>

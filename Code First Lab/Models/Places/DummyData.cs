@@ -7,18 +7,6 @@ namespace Code_First_Lab.Models.Places
 {
     public class DummyData
     {
-        public static List<City> getCities()
-        {
-            List<City> cities = new List<City>()
-            {
-                new City() { cityID = 1, cityName = "Vancouver", population = 2463431 },
-                new City() { cityID = 2, cityName = "Burnaby", population = 232755 },
-                new City() { cityID = 3, cityName = "Delta", population = 99863 },
-            };
-
-            return cities;
-        }
-
         public static List<Province> getProvinces()
         {
             List<Province> provinces = new List<Province>()

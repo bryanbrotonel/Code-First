@@ -38,6 +38,7 @@ namespace Code_First_Lab.Controllers
         // GET: Cities/Create
         public ActionResult Create()
         {
+            ViewBag.ProvinceCode = new SelectList(db.Provinces, "ProvinceCode", "ProvinceCode");
             return View();
         }
 
@@ -50,6 +51,7 @@ namespace Code_First_Lab.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 db.Cities.Add(city);
                 db.SaveChanges();
                 return RedirectToAction("Index");

@@ -31,10 +31,8 @@ namespace Code_First_Lab.Migrations.Places
 
             context.Provinces.AddOrUpdate(
                 p => p.provinceCode, DummyData.getProvinces().ToArray());
-            context.SaveChanges();
 
-            context.Cities.AddOrUpdate(
-                c => c.cityID, DummyData.getCities().ToArray());
+            context.SaveChanges();
         }
     }
 }
