@@ -10,8 +10,14 @@ namespace Code_First_Lab.Models.Places
     {
         [Key]
         public int cityID { get; set; }
+
+        [Display(Name = "City")]
         public string cityName { get; set; }
+
         public int population { get; set; }
+
+        [Display(Name = "Province Code")]
+        public string provinceCode { get; set; }
 
     }
 }

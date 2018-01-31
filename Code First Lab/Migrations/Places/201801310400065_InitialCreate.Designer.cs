@@ -13,7 +13,7 @@ namespace Code_First_Lab.Migrations.Places
         
         string IMigrationMetadata.Id
         {
-            get { return "201801300502592_InitialCreate"; }
+            get { return "201801310400065_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

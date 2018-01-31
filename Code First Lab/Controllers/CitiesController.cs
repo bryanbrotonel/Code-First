@@ -38,7 +38,7 @@ namespace Code_First_Lab.Controllers
         // GET: Cities/Create
         public ActionResult Create()
         {
-            ViewBag.ProvinceCode = new SelectList(db.Provinces, "ProvinceCode", "ProvinceCode");
+            ViewBag.ProvinceCode = new SelectList(db.Provinces, "ProvinceCode", "ProvinceName");
             return View();
         }
 
@@ -47,11 +47,11 @@ namespace Code_First_Lab.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "cityID,cityName,population")] City city)
+        public ActionResult Create([Bind(Include = "cityID,cityName,population,provinceCode")] City city)
         {
             if (ModelState.IsValid)
             {
-                
+    
                 db.Cities.Add(city);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -80,7 +80,7 @@ namespace Code_First_Lab.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "cityID,cityName,population")] City city)
+        public ActionResult Edit([Bind(Include = "cityID,cityName,population,provinceCode")] City city)
         {
             if (ModelState.IsValid)
             {

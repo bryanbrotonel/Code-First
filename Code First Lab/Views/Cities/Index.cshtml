@@ -12,35 +12,34 @@
 <table class="table">
     <tr>
         <th>
-            City Name
+            @Html.DisplayNameFor(model => model.cityName)
         </th>
         <th>
-            Population
+            @Html.DisplayNameFor(model => model.population)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.provinceCode)
         </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.cityName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.population)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.cityID)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.cityID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.cityID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.cityID })
-            </td>
-
-        </tr>
-    }
-
-
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.population)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.provinceCode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cityID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cityID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cityID })
+        </td>
+    </tr>
+}
 
 </table>

@@ -197,15 +197,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Places\201801300502592_InitialCreate.cs" />
-    <Compile Include="Migrations\Places\201801300502592_InitialCreate.Designer.cs">
-      <DependentUpon>201801300502592_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\Places\201801310400065_InitialCreate.cs" />
+    <Compile Include="Migrations\Places\201801310400065_InitialCreate.Designer.cs">
+      <DependentUpon>201801310400065_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Places\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Places\City.cs" />
+    <Compile Include="Migrations\Places\Configuration.cs" />
     <Compile Include="Models\Places\DummyData.cs" />
     <Compile Include="Models\Places\PlacesContext.cs" />
     <Compile Include="Models\Places\Province.cs" />
@@ -286,11 +286,6 @@
     <Content Include="Views\Cities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\Places\201801300502592_InitialCreate.resx">
-      <DependentUpon>201801300502592_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
@@ -302,6 +297,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\Places\201801310400065_InitialCreate.resx">
+      <DependentUpon>201801310400065_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

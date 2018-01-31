@@ -6,7 +6,7 @@ namespace Code_First_Lab.Migrations.Places
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Code_First_Lab.Models.Places.PlacesContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Code_First_Lab.Models.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -14,7 +14,7 @@ namespace Code_First_Lab.Migrations.Places
             MigrationsDirectory = @"Migrations\Places";
         }
 
-        protected override void Seed(Code_First_Lab.Models.Places.PlacesContext context)
+        protected override void Seed(Code_First_Lab.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
