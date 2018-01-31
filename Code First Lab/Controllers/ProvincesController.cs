@@ -6,13 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Code_First_Lab.Models;
 using Code_First_Lab.Models.Places;
 
 namespace Code_First_Lab.Controllers
 {
     public class ProvincesController : Controller
     {
-        private PlacesContext db = new PlacesContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Provinces
         public ActionResult Index()
